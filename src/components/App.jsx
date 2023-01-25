@@ -15,7 +15,6 @@ export class App extends React.Component {
   };
 
   formSubmitHandler = contact => {
-    console.log(contact);
     if (
       !this.state.contacts.find(
         ({ name }) => name.toLocaleLowerCase() === contact.name.toLowerCase()
@@ -49,11 +48,9 @@ export class App extends React.Component {
     return (
       <div
         style={{
-          // height: '100vh',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'flex-start',
-          // justifyContent: 'center',
           alignItems: 'center',
           fontSize: 40,
           color: '#010101',

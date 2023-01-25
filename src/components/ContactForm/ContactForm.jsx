@@ -4,8 +4,8 @@ import propTypes from 'prop-types';
 import css from './ContactForm.module.css';
 
 export class ContactForm extends Component {
-  nameInputId = nanoid();
-  contactsInputId = nanoid();
+  // nameInputId = nanoid();
+  // contactsInputId = nanoid();
 
   state = {
     name: '',
@@ -36,7 +36,6 @@ export class ContactForm extends Component {
     return (
       <form
         onSubmit={this.handleSubmit}
-        autoComplete="off"
         className={css.form}
       >
         <div>
@@ -54,7 +53,7 @@ export class ContactForm extends Component {
             />
           </label>
 
-          <label htmlFor={this.contactsInputId}>
+          <label className={css.labelForm}>
             Number
             <input
               className={css.input}

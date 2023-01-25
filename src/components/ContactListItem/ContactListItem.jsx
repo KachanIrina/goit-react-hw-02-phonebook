@@ -1,17 +1,20 @@
 import propTypes from 'prop-types';
 
-export const ContactListItem = ({ name, number, DeleteContact }) => {
-  <li>
-    {name}: {number}
-    <button type="button" onClick={() => DeleteContact()}>
-      Delete
-    </button>
-  </li>;
+export const ContactListItem = ({ name, number, id, deleteContact }) => {
+  return (
+    <li>
+      {name}: {number}
+      <button type="button" onClick={() => deleteContact(id)}>
+        Delete
+      </button>
+    </li>
+  );
 };
 
 ContactListItem.propTypes = {
   contact: propTypes.shape(
     propTypes.exact({
+      id: propTypes.string.isRequired,
       name: propTypes.string.isRequired,
       number: propTypes.string.isRequired,
     })
