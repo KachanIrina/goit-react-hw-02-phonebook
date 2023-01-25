@@ -4,8 +4,6 @@ import propTypes from 'prop-types';
 import css from './ContactForm.module.css';
 
 export class ContactForm extends Component {
-  // nameInputId = nanoid();
-  // contactsInputId = nanoid();
 
   state = {
     name: '',

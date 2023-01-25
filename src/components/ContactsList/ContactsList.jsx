@@ -1,6 +1,5 @@
 import { ContactListItem } from 'components/ContactListItem/ContactListItem';
 import propTypes from 'prop-types';
-// import css from './ContactsList.module.css';
 
 export const ContactsList = ({ contacts, deleteContact }) => (
   <ul>
@@ -17,12 +16,8 @@ export const ContactsList = ({ contacts, deleteContact }) => (
 );
 
 ContactsList.propTypes = {
-  contact: propTypes.shape(
-    propTypes.exact({
-      id: propTypes.string.isRequired,
-      name: propTypes.string.isRequired,
-      number: propTypes.string.isRequired,
-    })
-  ),
+  id: propTypes.string.isRequired,
+  name: propTypes.string.isRequired,
+  number: propTypes.string.isRequired,
   deleteContact: propTypes.func.isRequired,
 };
