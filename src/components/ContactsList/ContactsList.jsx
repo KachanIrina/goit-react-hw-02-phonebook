@@ -16,8 +16,12 @@ export const ContactsList = ({ contacts, deleteContact }) => (
 );
 
 ContactsList.propTypes = {
-  id: propTypes.string.isRequired,
-  name: propTypes.string.isRequired,
-  number: propTypes.string.isRequired,
+  contacs: propTypes.shape(
+    propTypes.exact({
+      id: propTypes.string.isRequired,
+      name: propTypes.string.isRequired,
+      number: propTypes.string.isRequired,
+    })
+  ),
   deleteContact: propTypes.func.isRequired,
 };
